@@ -6,6 +6,10 @@ from django.http import HttpResponse
 from .models import Student
 
 @csrf_exempt
+def index(request):
+    return HttpResponse("Welcome To My Deploy Website")
+
+@csrf_exempt
 def stude_get(request):
     get_student = Student.objects.all()
     context = get_student
